@@ -8,7 +8,7 @@
 <body>
 
     <h1>This code was from google gemini</h1>
-    <!-- <button id="myButton">Click</button> -->
+    <button id="myButton">Click</button>
 
     
     <!-- 
@@ -20,31 +20,31 @@
 
     <script>
         //THIS CODE BELOW CANCELED OUT IS FROM GEMINI
-        // const audioFiles = [
-        //     "assets/marimba1.mp3", // Replace with your actual sound file paths
-        //     "assets/marimba2.mp3",
-        //     "assets/marimba3.mp3",
-        //     "assets/harp1.mp3", // Replace with your actual sound file paths
-        //     "assets/harp2.mp3",
-        //     "assets/harp3.mp3",
-        //     "assets/bells1.mp3",
-        //     "assets/bells2.mp3",
+        const audioFiles = [
+            "assets/marimba1.mp3", // Replace with your actual sound file paths
+            "assets/marimba2.mp3",
+            "assets/marimba3.mp3",
+            "assets/harp1.mp3", // Replace with your actual sound file paths
+            "assets/harp2.mp3",
+            "assets/harp3.mp3",
+            "assets/bells1.mp3",
+            "assets/bells2.mp3"
             
-        // ];
+        ];
 
-        // const myButton = document.getElementById("myButton");
+        const myButton = document.getElementById("myButton");
 
-        // myButton.addEventListener("click", () => {
-        //     const randomIndex = Math.floor(Math.random() * audioFiles.length);
-        //     const randomAudioFile = audioFiles[randomIndex];
-        //     const audio = new Audio(randomAudioFile);
-        //     audio.play();
-        // });
+        myButton.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * audioFiles.length);
+            const randomAudioFile = audioFiles[randomIndex];
+            const audio = new Audio(randomAudioFile);
+            audio.play();
+        });
 
 
         //THIS ONE WORKS
-        dropNote.addEventListener("keydown", (dropNotePressed) => {
-            if(dropNotePressed.key == 'f' || dropNotePressed.key == 'j')    {
+        dropNote.adddropNotePressedListener("keydown", (dropNotePressed) => {
+            if(dropNotePressed.key == 'f') {
             const Marimba = [
             "assets/marimba1.mp3",
             "assets/marimba2.mp3",
