@@ -6,31 +6,85 @@
     <title>Random Sound on Click</title>
 </head>
 <body>
-    <button id="myButton">Click Me!</button>
 
     <h1>This code was from google gemini</h1>
+    <!-- <button id="myButton">Click</button> -->
+
+    
+    <!-- 
+    //DONT KNOW WHATS WRONG WITH THESE TWO
+    <button id="LdropNote"><img src="assets/drop.svg"></button>
+    <button id="RdropNote"><img src="assets/drop.svg"></button> -->
+
+    <button id="dropNote"><img src="assets/drop.svg"></button>
 
     <script>
-        const audioFiles = [
-            "assets/marimba1.mp3", // Replace with your actual sound file paths
+        //THIS CODE BELOW CANCELED OUT IS FROM GEMINI
+        // const audioFiles = [
+        //     "assets/marimba1.mp3", // Replace with your actual sound file paths
+        //     "assets/marimba2.mp3",
+        //     "assets/marimba3.mp3",
+        //     "assets/harp1.mp3", // Replace with your actual sound file paths
+        //     "assets/harp2.mp3",
+        //     "assets/harp3.mp3",
+        //     "assets/bells1.mp3",
+        //     "assets/bells2.mp3",
+            
+        // ];
+
+        // const myButton = document.getElementById("myButton");
+
+        // myButton.addEventListener("click", () => {
+        //     const randomIndex = Math.floor(Math.random() * audioFiles.length);
+        //     const randomAudioFile = audioFiles[randomIndex];
+        //     const audio = new Audio(randomAudioFile);
+        //     audio.play();
+        // });
+
+
+        //THIS ONE WORKS
+        dropNote.addEventListener("keydown", (dropNotePressed) => {
+            if(dropNotePressed.key == 'f' || dropNotePressed.key == 'j')    {
+            const Marimba = [
+            "assets/marimba1.mp3",
             "assets/marimba2.mp3",
             "assets/marimba3.mp3",
-            "assets/harp1.mp3", // Replace with your actual sound file paths
-            "assets/harp2.mp3",
-            "assets/harp3.mp3",
-            "assets/bells1.mp3",
-            "assets/bells2.mp3",
-            
-        ];
-
-        const myButton = document.getElementById("myButton");
-
-        myButton.addEventListener("click", () => {
-            const randomIndex = Math.floor(Math.random() * audioFiles.length);
-            const randomAudioFile = audioFiles[randomIndex];
-            const audio = new Audio(randomAudioFile);
+            ];
+            const randomIndex = Math.floor(Math.random() * Marimba.length);
+            const randomMarimba = Marimba[randomIndex];
+            const audio = new Audio(randomMarimba);
             audio.play();
+            }
         });
+
+        //DONT KNOW WHATS WRONG WITH THESE TWO
+        // LdropNote.addEventListener("keydown", (LdropNotePressed) => {
+        //     if(LdropNotePressed.key == 'f')    {
+        //     const Marimba = [
+        //     "assets/marimba1.mp3",
+        //     "assets/marimba2.mp3",
+        //     "assets/marimba3.mp3",
+        //     ];
+        //     const randomIndex = Math.floor(Math.random() * Marimba.length);
+        //     const randomMarimba = Marimba[randomIndex];
+        //     const audio = new Audio(randomMarimba);
+        //     audio.play();
+        //     }
+        // });
+
+        // RdropNote.addEventListener2("keydown", (RdropNotePressed) => {
+        //     if(RdropNotePressed.key == 'j')    {
+        //     const Marimba = [
+        //     "assets/marimba1.mp3",
+        //     "assets/marimba2.mp3",
+        //     "assets/marimba3.mp3",
+        //     ];
+        //     const randomIndex = Math.floor(Math.random() * Marimba.length);
+        //     const randomMarimba = Marimba[randomIndex];
+        //     const audio = new Audio(randomMarimba);
+        //     audio.play();
+        //     }
+        // });
     </script>
 </body>
 </html>
