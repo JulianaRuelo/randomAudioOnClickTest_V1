@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sound on Click</title>
+</head>
+<body>
+    <button id="myButton">Click Me!</button>
+
+    <h1>This code was from google gemini</h1>
+
+    <script>
+        const audioFiles = [
+            "assets/marimba1.mp3", // Replace with your actual sound file paths
+            "assets/marimba2.mp3",
+            "assets/marimba3.mp3"
+        ];
+
+        const myButton = document.getElementById("myButton");
+
+        myButton.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * audioFiles.length);
+            const randomAudioFile = audioFiles[randomIndex];
+            const audio = new Audio(randomAudioFile);
+            audio.play();
+        });
+    </script>
+</body>
+</html>
