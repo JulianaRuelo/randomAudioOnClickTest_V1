@@ -42,9 +42,11 @@
         });
 
 
-        //THIS ONE WORKS
-        dropNote.adddropNotePressedListener("keydown", (dropNotePressed) => {
-            if(dropNotePressed.key == 'f') {
+        //idk what happened here
+
+        const dropNote = document.getElementById("dropNote");
+        dropNote.addEventListener("keydown", (dropNotePressed) => {
+            onkeydown = (dropNotePressed.key == 'f');
             const Marimba = [
             "assets/marimba1.mp3",
             "assets/marimba2.mp3",
@@ -54,7 +56,7 @@
             const randomMarimba = Marimba[randomIndex];
             const audio = new Audio(randomMarimba);
             audio.play();
-            }
+            
         });
 
         //DONT KNOW WHATS WRONG WITH THESE TWO
