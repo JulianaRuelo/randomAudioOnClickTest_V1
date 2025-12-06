@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>This code was from google gemini</h1>
+    <h1>This code was adapted from google gemini</h1>
     <button id="myButton">Click</button>
 
     
@@ -21,9 +21,9 @@
     <script>
         //THIS CODE BELOW CANCELED OUT IS FROM GEMINI
         const audioFiles = [
-            "assets/marimba1.mp3", // Replace with your actual sound file paths
-            "assets/marimba2.mp3",
-            "assets/marimba3.mp3",
+            // "assets/marimba1.mp3", // Replace with your actual sound file paths
+            // "assets/marimba2.mp3",
+            // "assets/marimba3.mp3",
             "assets/harp1.mp3", // Replace with your actual sound file paths
             "assets/harp2.mp3",
             "assets/harp3.mp3",
@@ -46,7 +46,8 @@
 
         const dropNote = document.getElementById("dropNote");
         dropNote.addEventListener("keydown", (dropNotePressed) => {
-            onkeydown = (dropNotePressed.key == 'f');
+            if(dropNotePressed.key === 'j')  {
+                console.log('j pressed');
             const Marimba = [
             "assets/marimba1.mp3",
             "assets/marimba2.mp3",
@@ -56,7 +57,7 @@
             const randomMarimba = Marimba[randomIndex];
             const audio = new Audio(randomMarimba);
             audio.play();
-            
+            }
         });
 
         //DONT KNOW WHATS WRONG WITH THESE TWO
